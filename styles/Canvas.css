@@ -1,25 +1,12 @@
 .canvas-wrapper {
     width: fit-content;
-    margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-canvas {
-    margin-top: 5px;
 }
 
 .canvas-button-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-around;
-}
-
-.canvas-clear-button, .canvas-send-button {
-    font-size: 1rem;
-    border: none;
-    background: #eee;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-top: 10px;
 }

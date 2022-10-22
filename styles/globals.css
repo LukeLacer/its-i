@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button, ::-webkit-file-upload-button {
+  font-size: 1rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.home-wrapper {
+  display: flex;
+  margin: 50px;
+  justify-content: space-around;
+}

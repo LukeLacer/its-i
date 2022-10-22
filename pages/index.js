@@ -1,15 +1,18 @@
 import styles from '../styles/Home.module.css'
 import Canvas from '../components/Canvas'
+import FilePicker from '../components/FilePicker'
 
 export default function Home() {
-  const sendDraw = (img_data) => {
-    let img = new Image();
-    img.src = img_data;
+  const sendImage = (img_data) => {
+    console.log(typeof img_data)
+    console.log(img_data)
     alert('Essa imagem pode ser uma letra "i"');
   }
+
   return (
-    <>
-      <Canvas width={256} height={256} sendDraw={sendDraw}/>
-    </>
+    <div className='home-wrapper'>
+      <Canvas width={256} height={256} chosenimage={sendImage}/>
+      <FilePicker chosenimage={sendImage}/>
+    </div>
   )
 }

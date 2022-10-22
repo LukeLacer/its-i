@@ -4,11 +4,10 @@ import React, { useEffect, useRef, useState } from 'react';
 interface ICanvasProps extends React.DetailedHTMLProps<React.CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement> {
     width: number;
     height: number;
-    sendDraw: Function;
+    chosenimage: Function;
 }
 
-const Canvas = (props: ICanvasProps) => {
-    const {width, height, sendDraw} = props;
+const Canvas = ({width, height, chosenimage, ...rest}: ICanvasProps) => {
 
     const canvasStyling = {
         width: `${width}px`,
@@ -64,9 +63,14 @@ const Canvas = (props: ICanvasProps) => {
         context.restore();
     }
 
+    const sendImage = () => {
+        chosenimage(canvasRef.current.toDataURL());
+        clearDraw();
+    }
+
     return (<div className='canvas-wrapper'>
         <canvas
-            {...props}
+            {...rest}
             style={canvasStyling}
             onMouseDown={startDrawing}
             onMouseUp={finishDrawing}
@@ -76,7 +80,7 @@ const Canvas = (props: ICanvasProps) => {
         />
         <div className='canvas-button-wrapper'>
             <button className='canvas-clear-button' onClick={e => clearDraw()}>Clear</button>
-            <button className='canvas-send-button' onClick={e => sendDraw(canvasRef.current.toDataURL())}>Send</button>
+            <button className='canvas-send-button' onClick={e => sendImage()}>Send</button>
         </div>
     </div>)
 }
