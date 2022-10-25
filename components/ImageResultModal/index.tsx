@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Modal from '../Modal';
 
 interface IImageResultModalProps {
     image_data: string;
@@ -9,14 +10,14 @@ interface IImageResultModalProps {
 
 const ImageResultModal = ({image_data, closeModal, message}: IImageResultModalProps) => {
     return (
-        <div className='modal-wrapper'>
+        <Modal close={closeModal}>
             { message === "True"
                 ? <span className='true-message'>A letra é um i</span>
                 : <span className='false-message'>A letra não é um i</span>
             }
             <Image alt='Image preview' src={image_data} width={300} height={300} />
             <button onClick={() => closeModal()}>Close</button>
-        </div>
+        </Modal>
     )
 }
 
