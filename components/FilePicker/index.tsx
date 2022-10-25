@@ -17,8 +17,8 @@ const FilePicker = ({chosenimage}: IFilePickerProps) => {
         reader.onload = function () {
             chosenimage(reader.result);
         };
-        reader.onerror = function (error) {
-          console.log('Error: ', error);
+        reader.onerror = function () {
+          alert('Algum erro não deixou a gente ler a imagem');
         };
     }, [selectedFile])
 
