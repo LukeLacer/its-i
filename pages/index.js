@@ -17,7 +17,7 @@ export default function Home() {
       setMessage(res.data.message);
     })
     .catch(error => {
-      alert('Erro no servidor' + error.response.data.error)
+      alert('Ocorreu algum erro na hora de receber a resposta')
 
     });
   }
