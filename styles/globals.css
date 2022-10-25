@@ -25,7 +25,14 @@ button, ::-webkit-file-upload-button {
 }
 
 .home-wrapper {
-  display: flex;
   margin: 50px;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-picker-wrapper {
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
