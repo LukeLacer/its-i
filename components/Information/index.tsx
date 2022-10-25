@@ -15,7 +15,7 @@ const Information = () => {
         <li>Letras pretas com fundo branco</li>
         <li>Imagem com baixa resolução</li>
         <p>Desenhar no campo abaixo é recomendado, mas também é possível realizar o upload de uma imagem caso desejado.</p>
-        <p>O pré processamento transforma a imagem, transformando-a em uma imagem em preto e branco e de resolução de 28 x 28px, portanto realizar o upload de imagens muito grandes ou com muitas cores afeta diretamente a predição.</p>
+        <p>O pré processamento muda a imagem, transformando-a em uma imagem em preto e branco e de resolução de 28 x 28px, portanto realizar o upload de imagens muito grandes ou com muitas cores afeta diretamente a predição.</p>
         <p>Um problema conhecido é que o pré processamento não trabalha com transparencia, portanto o uso de imagens com canal de transparencia resulta em um erro.</p>
     </div>)
 }
