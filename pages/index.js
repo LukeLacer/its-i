@@ -14,6 +14,9 @@ export default function Home() {
     .then((res) => {
       setImage_base64(img_data);
       setMessage(res.data.message);
+    })
+    .catch(error => {
+      alert('Erro no servidor' + error.response.data.error)
     });
   }
 
