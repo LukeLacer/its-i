@@ -10,10 +10,8 @@ export default function Home() {
   const [message, setMessage] = useState(null)
 
   const sendImage = (img_data) => {
-    console.log(img_data)
     apiClient.post('itsi', { imageData: img_data })
     .then((res) => {
-      console.log(res)
       setImage_base64(img_data);
       setMessage(res.data.message);
     });

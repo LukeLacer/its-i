@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: process.env.API_URL
+  baseURL: 'https://its-i.herokuapp.com/'
 });
 
 export default apiClient;
