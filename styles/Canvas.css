@@ -1,0 +1,12 @@
+.canvas-wrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canvas-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
