@@ -27,6 +27,8 @@ const Canvas = ({width, height, chosenimage, ...rest}: ICanvasProps) => {
 
         const context = canvas.getContext('2d');
         context.scale(2,2);
+        context.fillStyle = "white";
+        context.fillRect(0, 0, width, height)
         context.lineCap = 'round';
         context.strokeStyle = 'black';
         context.lineWidth = 5;
@@ -61,6 +63,8 @@ const Canvas = ({width, height, chosenimage, ...rest}: ICanvasProps) => {
         context.setTransform(1, 0, 0, 1, 0, 0);
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.restore();
+        context.fillStyle = "white";
+        context.fillRect(0, 0, width, height)
     }
 
     const sendImage = () => {
