@@ -4,3 +4,24 @@
     text-align: center;
     margin: 20px 0;
 }
+
+.pre-processed-image {
+    image-rendering: pixelated;
+}
+
+.images-wrapper {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.images-wrapper span{
+    margin-bottom: 10px;
+}
+
+.single-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-wrap: break-word;
+}
