@@ -31,7 +31,7 @@ const Canvas = ({width, height, chosenimage, ...rest}: ICanvasProps) => {
         context.fillRect(0, 0, width, height)
         context.lineCap = 'round';
         context.strokeStyle = 'black';
-        context.lineWidth = 5;
+        context.lineWidth = 10;
         contextRef.current = context;
     }, []);
     
