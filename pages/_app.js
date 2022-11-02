@@ -4,6 +4,7 @@ import '../styles/FilePicker.css';
 import '../styles/ImageResultModal.css';
 import '../styles/Modal.css';
 import '../styles/Information.css';
+import '../styles/Loading.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
