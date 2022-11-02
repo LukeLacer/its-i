@@ -9,7 +9,7 @@ interface IModalProps {
 const Modal = ({ children, close }: IModalProps) => {
     return (
         <div className='modal' onClick={() => close()}>
-            <div className='modal-content'>
+            <div className='modal-content' onClick={e => e.stopPropagation()}>
                 {children}
             </div>
         </div>
